@@ -5,34 +5,11 @@ int itc_rev_num(long long number)
     if (number <= 0) {
         return -1;
     }
-    /*long long number2, number3 = 0;
-    while (number > 0){
-        number2 = number % 10;
-        number3 = number3 * 10 + number2;
-        number /= 10;
-    }
-    return number3;*/
 
-    /*long long number2, number3 = 0, kop, kol = 0;
-    kop = number;
+    long long num, num3 = 0;
     while (number > 0){
-        number2 = number % 10;
-        number3 = number3 * 10 + number2;
-        number /= 10;
-    }
-    while(kop > 0){
-        if (number3 % 10 != kop % 10){
-            kol++;
-        }
-        number3 /= 10;
-        kop /= 10;
-    }
-    return kol;*/
-
-    long long number2, number3 = 0;
-    while (number > 0){
-        number2 = number % 10;
-        number3 = number3 * 10 + number2;
+        num = number % 10;
+        num3 = num3 * 10 + number2;
         number /= 10;
     }
   int itc_second_max_num(long long number){
@@ -42,18 +19,18 @@ int itc_rev_num(long long number)
     if (number <= 0) {
         return -1;
     }
-    int mmax = 0, mmax2 = -10000;
+    int maxi = 0, maxi2 = -10000;
     while (number != 0){
-        if (mmax < number % 10){
-            mmax2 = mmax;
-            mmax = number % 10;
+        if (maxi < number % 10){
+            maxi2 = maxi;
+            maxi = number % 10;
         }
-        else if (mmax2 < number % 10){
-            mmax2 = number % 10;
+        else if (maxi2 < number % 10){
+            maxi2 = number % 10;
         }
         number /= 10;
     }
-    return mmax2;
+    return maxi2;
 }
 int itc_second_simple_max_num(long long number){
     if (number < 10){
@@ -62,21 +39,21 @@ int itc_second_simple_max_num(long long number){
     if (number <= 0) {
         return -1;
     }
-    int mmax = 0, mmax2 = -10000;
+    int maxi = 0, maxi2 = -10000;
     while (number != 0){
-        if (mmax < number % 10){
-            mmax2 = mmax;
-            mmax = number % 10;
+        if (maxi < number % 10){
+            maxi2 = maxi;
+            maxi = number % 10;
         }
-        else if (mmax2 < number % 10){
-            mmax2 = number % 10;
+        else if (maxi2 < number % 10){
+            maxi2 = number % 10;
         }
         number /= 10;
     }
-    if (mmax == mmax2){
+    if (maxi == maxi2){
         return -1;
     }
-    return mmax2;
+    return maxi2;
 }
     return itc_len_num(number3);
 }
@@ -85,26 +62,26 @@ int itc_null_count(long long number){
     if (number <= 0) {
         return -1;
     }
-    long long kol;
+    long long kolich;
     while (number != 0){
         if (number % 10 == 0){
-            kol++;
+            kolich++;
         }
         number /= 10;
     }
-    return kol;
+    return kolich;
 }
 bool itc_mirror_num(long long number){
     if (number <= 0) {
         return -1;
     }
-    long long number2, number3 = 0;
-    number2 = number;
+    long long num, num3 = 0;
+    num = number;
     while (number != 0){
-        number3 = number3 * 10 + number % 10;
+        num3 = num3 * 10 + number % 10;
         number /= 10;
     }
-    if (number2 == number3){
+    if (num == num3){
         return true;
     }
     return false;
@@ -113,11 +90,11 @@ int itc_mirror_count(long long number){
     if (number <= 0) {
         return -1;
     }
-    int kol = 0;
+    int kolich = 0;
     for (int i = 1; i <= number; i++){
         if (itc_mirror_num(i) == true){
-            kol++;
+            kolich++;
         }
     }
-    return kol;
+    return kolich;
 }
