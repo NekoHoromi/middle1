@@ -5,14 +5,14 @@ long long itc_bin_num(long long number){
     if (number < 0){
         return -1;
     }
-    int k = 1;
-    long long itog = 0;
+    int a = 1;
+    long long itogo = 0;
     while (number != 0){
-        itog = itog + number % 2 * k;
+        itogo = itogo + number % 2 * k;
         number /= 2;
-        k *= 10;
+        a *= 10;
     }
-    return itog;
+    return itogo;
 }
 long long itc_oct_num(long long number){
     if (number <= 0) {
@@ -21,85 +21,85 @@ long long itc_oct_num(long long number){
     if (number < 0){
         return -1;
     }
-    int k = 1;
-    long long itog = 0;
+    int a = 1;
+    long long itogo = 0;
     while (number != 0){
-        itog = itog + number % 8 * k;
+        itogo = itogo + number % 8 * a;
         number /= 8;
-        k *= 10;
+        a *= 10;
     }
-    return itog;
+    return itogo;
 }
 int itc_rev_bin_num(long long number){
     if (number <= 0){
         return -1;
     }
-    long long number2 = number;
-    long long k = 1;
-    long long rez = 0;
-    while (number2 != 0){
-        if (number2 % 10 >= 2){
+    long long num = number;
+    long long a = 1;
+    long long rezult = 0;
+    while (num != 0){
+        if (num % 10 >= 2){
             return -1;
         }
-    number2 /= 10;
+    num /= 10;
     }
     while (number != 0){
-        rez = rez + number % 10 * k;
-        k *= 2;
+        rezult = rezult + number % 10 * a;
+        a *= 2;
         number /= 10;
     }
-    return rez;
+    return rezult;
 }
 int itc_rev_oct_num(long long number){
     if (number <= 0){
         return -1;
     }
-    long long number2 = number;
-    long long k = 1;
-    long long rez = 0;
-    while (number2 != 0){
-        if (number2 % 10 >= 8){
+    long long num = number;
+    long long a = 1;
+    long long rezult = 0;
+    while (num != 0){
+        if (num % 10 >= 8){
             return -1;
         }
-    number2 /= 10;
+    num /= 10;
     }
     while (number != 0){
-        rez = rez + number % 10 * k;
-        k *= 8;
+        rezult = rezult + number % 10 * a;
+        a *= 8;
         number /= 10;
     }
-    return rez;
+    return rezult;
 }
 int itc_rev_covert_num(long long number, int ss){
     if (number <= 0){
         return -1;
     }
-    long long number2 = number;
-    long long k = 1;
-    long long rez = 0;
-    while (number2 != 0){
-        if (number2 % 10 >= ss){
+    long long num = number;
+    long long a = 1;
+    long long rezult = 0;
+    while (num != 0){
+        if (num % 10 >= ss){
             return -1;
         }
-    number2 /= 10;
+    num /= 10;
     }
     while (number != 0){
-        rez = rez + number % 10 * k;
-        k *= ss;
+        rezult = rezult + number % 10 * a;
+        a *= ss;
         number /= 10;
     }
-    return rez;
+    return rezult;
 }
 int itc_covert_num(long long number, int ss){
     if (number <= 0){
         return -1;
     }
-    int k = 1;
-    long long itog = 0;
+    int a = 1;
+    long long itogo = 0;
     while (number != 0){
-        itog = itog + number % ss * k;
+        itogo = itogo + number % ss * a;
         number /= ss;
-        k *= 10;
+        a *= 10;
     }
-    return itog;
+    return itogo;
 }
