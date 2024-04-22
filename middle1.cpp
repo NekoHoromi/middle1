@@ -8,36 +8,36 @@ int itc_len_num(long long number){
     if (number <= 0) {
         return -1;
     }
-    int kol = 0;
+    int kolich = 0;
     while (number > 0){
         number /= 10;
-        kol ++;
+        kolich ++;
     }
-    return kol;
+    return kolich;
 }
 int itc_sum_num(long long number){
     if (number <= 0){
         return -1;
     }
-    int number2, sum = 0;
+    int num, summ = 0;
     while (number > 0){
-        number2 = number % 10;
-        sum += number2;
+        num = number % 10;
+        summ += num;
         number /= 10;
     }
-    return sum;
+    return summ;
 }
 long long itc_multi_num(long long number){
     if (number <= 0){
         return -1;
     }
-    int number2, proz = 1;
+    int num, proiz = 1;
     while (number > 0){
-        number2 = number % 10;
-        proz *= number2;
+        num = number % 10;
+        proiz *= num;
         number /= 10;
     }
-    return proz;
+    return proiz;
 }
 int itc_max_num(long long number){
     if (number <= 0){
@@ -57,13 +57,13 @@ int itc_min_num(long long number){
     if (number <= 0) {
         return -1;
     }
-    int number2, mmin = 9;
+    int num, mini = 9;
     while (number > 0){
-        number2 = number % 10;
+        num = number % 10;
         if (number2 < mmin){
-            mmin = number2;
+            mini = num;
         }
         number /= 10;
     }
-    return mmin;
+    return mini;
 }
