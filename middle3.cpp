@@ -1,19 +1,7 @@
 #include "middle.h"
 using namespace std;
 
-long long itc_bin_num(long long number){
-    if (number < 0){
-        return -1;
-    }
-    int a = 1;
-    long long itogo = 0;
-    while (number != 0){
-        itogo = itogo + number % 2 * k;
-        number /= 2;
-        a *= 10;
-    }
-    return itogo;
-}
+
 long long itc_oct_num(long long number){
     if (number <= 0) {
         return -1;
@@ -99,6 +87,20 @@ int itc_covert_num(long long number, int ss){
     while (number != 0){
         itogo = itogo + number % ss * a;
         number /= ss;
+        a *= 10;
+    }
+    return itogo;
+}
+
+long long itc_bin_num(long long number){
+    if (number < 0){
+        return -1;
+    }
+    int a = 1;
+    long long itogo = 0;
+    while (number != 0){
+        itogo = itogo + number % 2 * k;
+        number /= 2;
         a *= 10;
     }
     return itogo;
