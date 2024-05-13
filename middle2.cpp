@@ -9,7 +9,7 @@ int itc_rev_num(long long number)
     long long num, num3 = 0;
     while (number > 0){
         num = number % 10;
-        num3 = num3 * 10 + number2;
+        num3 = num3 * 10 + num;
         number /= 10;
     }
   int itc_second_max_num(long long number){
@@ -55,7 +55,7 @@ int itc_second_simple_max_num(long long number){
     }
     return maxi2;
 }
-    return itc_len_num(number3);
+    return itc_len_num(num3);
 }
 
 int itc_null_count(long long number){
