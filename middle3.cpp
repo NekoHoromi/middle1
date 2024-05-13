@@ -55,8 +55,8 @@ int itc_rev_oct_num(long long number){
         rezult = rezult + number % 10 * a;
         a *= 8;
         number /= 10;
-    }
     return rezult;
+    }
 }
 int itc_rev_covert_num(long long number, int ss){
     if (number <= 0){
@@ -99,7 +99,7 @@ long long itc_bin_num(long long number){
     int a = 1;
     long long itogo = 0;
     while (number != 0){
-        itogo = itogo + number % 2 * k;
+        itogo = itogo + number % 2 * a;
         number /= 2;
         a *= 10;
     }
