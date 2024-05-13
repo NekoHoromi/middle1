@@ -55,8 +55,8 @@ int itc_rev_oct_num(long long number){
         rezult = rezult + number % 10 * a;
         a *= 8;
         number /= 10;
-    return rezult;
     }
+    return rezult;
 }
 int itc_rev_covert_num(long long number, int ss){
     if (number <= 0){
