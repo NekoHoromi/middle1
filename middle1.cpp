@@ -5,9 +5,7 @@ void itc_num_print(int number){
     cout << number << endl;
 }
 int itc_len_num(long long number){
-    if (number <= 0) {
-        return -1;
-    }
+    
     int kolich = 0;
     while (number > 0){
         number /= 10;
