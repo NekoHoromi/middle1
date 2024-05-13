@@ -54,8 +54,6 @@ int itc_second_simple_max_num(long long number){
         return -1;
     }
     return maxi2;
-
-    return itc_len_num(num3);
 }
 
 int itc_null_count(long long number){
