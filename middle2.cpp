@@ -1,7 +1,6 @@
 #include "middle.h"
 using namespace std;
-int itc_rev_num(long long number)
-{
+int itc_rev_num(long long number){
     if (number <= 0) {
         return -1;
     }
@@ -12,6 +11,7 @@ int itc_rev_num(long long number)
         num3 = num3 * 10 + num;
         number /= 10;
     }
+}
   int itc_second_max_num(long long number){
     if (number < 10){
         return -1;
