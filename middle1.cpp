@@ -14,9 +14,6 @@ int itc_len_num(long long number){
     return kolich;
 }
 int itc_sum_num(long long number){
-    if (number <= 0){
-        return -1;
-    }
     int num, summ = 0;
     while (number > 0){
         num = number % 10;
@@ -26,9 +23,6 @@ int itc_sum_num(long long number){
     return summ;
 }
 long long itc_multi_num(long long number){
-    if (number <= 0){
-        return -1;
-    }
     int num, proiz = 1;
     while (number > 0){
         num = number % 10;
@@ -38,9 +32,7 @@ long long itc_multi_num(long long number){
     return proiz;
 }
 int itc_max_num(long long number){
-    if (number <= 0){
-        return -1;
-    }
+
     int num, maxi = 0;
     while (number > 0){
         num = number % 10;
@@ -52,9 +44,7 @@ int itc_max_num(long long number){
     return maxi;
 }
 int itc_min_num(long long number){
-    if (number <= 0) {
-        return -1;
-    }
+    
     int num, mini = 9;
     while (number > 0){
         num = number % 10;
