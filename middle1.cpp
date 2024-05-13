@@ -43,15 +43,15 @@ int itc_max_num(long long number){
     if (number <= 0){
         return -1;
     }
-    int number2, mmax = 0;
+    int num, maxi = 0;
     while (number > 0){
-        number2 = number % 10;
-        if (number2 > mmax){
-            mmax = number2;
+        num = number % 10;
+        if (num > maxi){
+            maxi = num;
         }
         number /= 10;
     }
-    return mmax;
+    return maxi;
 }
 int itc_min_num(long long number){
     if (number <= 0) {
@@ -60,7 +60,7 @@ int itc_min_num(long long number){
     int num, mini = 9;
     while (number > 0){
         num = number % 10;
-        if (number2 < mmin){
+        if (num < mini){
             mini = num;
         }
         number /= 10;
